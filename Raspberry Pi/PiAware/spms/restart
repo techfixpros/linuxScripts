@@ -1,0 +1,13 @@
+#/bin/bash
+#sudo systemctl stop spms-uat978.service
+#sudo systemctl stop spms-push-uat978.service
+sudo systemctl stop spms-adsb.service
+sudo systemctl stop spms-mlat.service
+echo "SPMS Services STOPPED"
+
+#sudo systemctl start spms-uat978.service
+#sudo systemctl start spms-push-uat978.service
+sudo systemctl start spms-adsb.service
+sudo systemctl start spms-mlat.service
+echo "SPMS Services STARTED"
+

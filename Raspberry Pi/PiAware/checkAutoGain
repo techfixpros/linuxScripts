@@ -1,0 +1,2 @@
+sudo autogain1090
+sudo journalctl -eu dump1090-fa-autogain

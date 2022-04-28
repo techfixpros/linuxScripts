@@ -1,0 +1,297 @@
+Hit:1 http://flightaware.com/mirror/raspbian/raspbian bullseye InRelease
+Hit:2 http://repo.feed.flightradar24.com flightradar24 InRelease
+Hit:3 http://flightaware.com/adsb/piaware/files/packages bullseye InRelease
+Hit:4 http://flightaware.com/mirror/raspberrypi/debian bullseye InRelease
+Hit:5 https://apt.rb24.com bullseye InRelease
+Hit:6 https://opensky-network.org/repos/debian opensky InRelease
+Reading package lists...
+Configuring FlightAware MLAT for port 42000
+mlat-results-format is unchanged
+Restarting Piaware
+INSTALLING PREREQUISITE PACKAGES
+--------------------------------------
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following package was automatically installed and is no longer required:
+  libfuse2
+Use 'sudo apt autoremove' to remove it.
+The following additional packages will be installed:
+  autopoint dh-autoreconf dh-strip-nondeterminism dwz gettext intltool-debian
+  libarchive-cpio-perl libarchive-zip-perl libdebhelper-perl
+  libfile-stripnondeterminism-perl libmail-sendmail-perl libsub-override-perl
+  libsys-hostname-long-perl po-debconf
+Suggested packages:
+  dh-make gettext-doc libasprintf-dev libgettextpo-dev libmail-box-perl
+The following NEW packages will be installed:
+  autopoint debhelper dh-autoreconf dh-strip-nondeterminism dwz gettext
+  intltool-debian libarchive-cpio-perl libarchive-zip-perl libdebhelper-perl
+  libfile-stripnondeterminism-perl libmail-sendmail-perl libsub-override-perl
+  libsys-hostname-long-perl po-debconf
+0 upgraded, 15 newly installed, 0 to remove and 0 not upgraded.
+Need to get 3,621 kB of archives.
+After this operation, 9,848 kB of additional disk space will be used.
+Get:1 http://flightaware.com/mirror/raspbian/raspbian bullseye/main armhf autopoint all 0.21-4 [510 kB]
+Get:2 http://flightaware.com/mirror/raspbian/raspbian bullseye/main armhf libdebhelper-perl all 13.3.4 [189 kB]
+Get:3 http://flightaware.com/mirror/raspbian/raspbian bullseye/main armhf dh-autoreconf all 20 [17.1 kB]
+Get:4 http://flightaware.com/mirror/raspbian/raspbian bullseye/main armhf libarchive-zip-perl all 1.68-1 [104 kB]
+Get:5 http://flightaware.com/mirror/raspbian/raspbian bullseye/main armhf libsub-override-perl all 0.09-2 [10.2 kB]
+Get:6 http://flightaware.com/mirror/raspbian/raspbian bullseye/main armhf libfile-stripnondeterminism-perl all 1.12.0-1 [26.3 kB]
+Get:7 http://flightaware.com/mirror/raspbian/raspbian bullseye/main armhf dh-strip-nondeterminism all 1.12.0-1 [15.4 kB]
+Get:8 http://flightaware.com/mirror/raspbian/raspbian bullseye/main armhf dwz armhf 0.13+20210201-1 [164 kB]
+Get:9 http://flightaware.com/mirror/raspbian/raspbian bullseye/main armhf gettext armhf 0.21-4 [1,215 kB]
+Get:10 http://flightaware.com/mirror/raspbian/raspbian bullseye/main armhf intltool-debian all 0.35.0+20060710.5 [26.8 kB]
+Get:11 http://flightaware.com/mirror/raspbian/raspbian bullseye/main armhf po-debconf all 1.0.21+nmu1 [248 kB]
+Get:12 http://flightaware.com/mirror/raspbian/raspbian bullseye/main armhf debhelper all 13.3.4 [1,049 kB]
+Get:13 http://flightaware.com/mirror/raspbian/raspbian bullseye/main armhf libarchive-cpio-perl all 0.10-1.1 [10.6 kB]
+Get:14 http://flightaware.com/mirror/raspbian/raspbian bullseye/main armhf libsys-hostname-long-perl all 1.5-2 [11.8 kB]
+Get:15 http://flightaware.com/mirror/raspbian/raspbian bullseye/main armhf libmail-sendmail-perl all 0.80-1.1 [25.5 kB]
+Fetched 3,621 kB in 2s (2,365 kB/s)
+Selecting previously unselected package autopoint.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 126121 files and directories currently installed.)
+Preparing to unpack .../00-autopoint_0.21-4_all.deb ...
+Unpacking autopoint (0.21-4) ...
+Selecting previously unselected package libdebhelper-perl.
+Preparing to unpack .../01-libdebhelper-perl_13.3.4_all.deb ...
+Unpacking libdebhelper-perl (13.3.4) ...
+Selecting previously unselected package dh-autoreconf.
+Preparing to unpack .../02-dh-autoreconf_20_all.deb ...
+Unpacking dh-autoreconf (20) ...
+Selecting previously unselected package libarchive-zip-perl.
+Preparing to unpack .../03-libarchive-zip-perl_1.68-1_all.deb ...
+Unpacking libarchive-zip-perl (1.68-1) ...
+Selecting previously unselected package libsub-override-perl.
+Preparing to unpack .../04-libsub-override-perl_0.09-2_all.deb ...
+Unpacking libsub-override-perl (0.09-2) ...
+Selecting previously unselected package libfile-stripnondeterminism-perl.
+Preparing to unpack .../05-libfile-stripnondeterminism-perl_1.12.0-1_all.deb ...
+Unpacking libfile-stripnondeterminism-perl (1.12.0-1) ...
+Selecting previously unselected package dh-strip-nondeterminism.
+Preparing to unpack .../06-dh-strip-nondeterminism_1.12.0-1_all.deb ...
+Unpacking dh-strip-nondeterminism (1.12.0-1) ...
+Selecting previously unselected package dwz.
+Preparing to unpack .../07-dwz_0.13+20210201-1_armhf.deb ...
+Unpacking dwz (0.13+20210201-1) ...
+Selecting previously unselected package gettext.
+Preparing to unpack .../08-gettext_0.21-4_armhf.deb ...
+Unpacking gettext (0.21-4) ...
+Selecting previously unselected package intltool-debian.
+Preparing to unpack .../09-intltool-debian_0.35.0+20060710.5_all.deb ...
+Unpacking intltool-debian (0.35.0+20060710.5) ...
+Selecting previously unselected package po-debconf.
+Preparing to unpack .../10-po-debconf_1.0.21+nmu1_all.deb ...
+Unpacking po-debconf (1.0.21+nmu1) ...
+Selecting previously unselected package debhelper.
+Preparing to unpack .../11-debhelper_13.3.4_all.deb ...
+Unpacking debhelper (13.3.4) ...
+Selecting previously unselected package libarchive-cpio-perl.
+Preparing to unpack .../12-libarchive-cpio-perl_0.10-1.1_all.deb ...
+Unpacking libarchive-cpio-perl (0.10-1.1) ...
+Selecting previously unselected package libsys-hostname-long-perl.
+Preparing to unpack .../13-libsys-hostname-long-perl_1.5-2_all.deb ...
+Unpacking libsys-hostname-long-perl (1.5-2) ...
+Selecting previously unselected package libmail-sendmail-perl.
+Preparing to unpack .../14-libmail-sendmail-perl_0.80-1.1_all.deb ...
+Unpacking libmail-sendmail-perl (0.80-1.1) ...
+Setting up gettext (0.21-4) ...
+Setting up libarchive-zip-perl (1.68-1) ...
+Setting up libdebhelper-perl (13.3.4) ...
+Setting up intltool-debian (0.35.0+20060710.5) ...
+Setting up autopoint (0.21-4) ...
+Setting up dwz (0.13+20210201-1) ...
+Setting up libarchive-cpio-perl (0.10-1.1) ...
+Setting up libsub-override-perl (0.09-2) ...
+Setting up libsys-hostname-long-perl (1.5-2) ...
+Setting up libfile-stripnondeterminism-perl (1.12.0-1) ...
+Setting up po-debconf (1.0.21+nmu1) ...
+Setting up dh-autoreconf (20) ...
+Setting up libmail-sendmail-perl (0.80-1.1) ...
+Setting up dh-strip-nondeterminism (1.12.0-1) ...
+Setting up debhelper (13.3.4) ...
+Processing triggers for install-info (6.7.0.dfsg.2-6) ...
+Processing triggers for libc-bin (2.31-13+rpt2+rpi1+deb11u2) ...
+Processing triggers for man-db (2.9.4-2) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+python-is-python2 is already the newest version (2.7.18-9).
+The following package was automatically installed and is no longer required:
+  libfuse2
+Use 'sudo apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+ BUILD AND INSTALL MLAT-CLIENT
+-----------------------------------
+
+Cloning into 'mlat-client'...
+Note: switching to 'tags/v0.2.6'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 84c8c8a Release 0.2.6
+dpkg-buildpackage: info: source package mlat-client
+dpkg-buildpackage: info: source version 0.2.6
+dpkg-buildpackage: info: source distribution stable
+dpkg-buildpackage: info: source changed by Oliver Jowett <oliver@mutability.co.uk>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture armhf
+ debian/rules clean
+dh clean --with python3
+dh: warning: Compatibility levels before 10 are deprecated (level 8 in use)
+dh: error: unable to load addon python3: Can't locate Debian/Debhelper/Sequence/python3.pm in @INC (you may need to install the Debian::Debhelper::Sequence::python3 module) (@INC contains: /etc/perl /usr/local/lib/arm-linux-gnueabihf/perl/5.32.1 /usr/local/share/perl/5.32.1 /usr/lib/arm-linux-gnueabihf/perl5/5.32 /usr/share/perl5 /usr/lib/arm-linux-gnueabihf/perl-base /usr/lib/arm-linux-gnueabihf/perl/5.32 /usr/share/perl/5.32 /usr/local/lib/site_perl) at (eval 4) line 1.
+BEGIN failed--compilation aborted at (eval 4) line 1.
+
+make: *** [debian/rules:36: clean] Error 25
+dpkg-buildpackage: error: debian/rules clean subprocess returned exit status 2
+dpkg: error: cannot access archive 'mlat-client_0.2.6*.deb': No such file or directory
+
+ CREATE AND CONFIGURE MLAT-CLIENT STARTUP SCRIPTS
+------------------------------------------------------
+
+--2022-03-15 18:26:42--  http://www.jurecka.net/spms/uat2esnt
+Resolving www.jurecka.net (www.jurecka.net)... 74.208.244.83
+Connecting to www.jurecka.net (www.jurecka.net)|74.208.244.83|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://www.jurecka.net/spms/uat2esnt [following]
+--2022-03-15 18:26:43--  https://www.jurecka.net/spms/uat2esnt
+Connecting to www.jurecka.net (www.jurecka.net)|74.208.244.83|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 82556 (81K)
+Saving to: '/home/pi/spms/uat2esnt'
+
+     0K .......... .......... .......... .......... .......... 62%  357K 0s
+    50K .......... .......... ..........                      100% 9.11M=0.1s
+
+2022-03-15 18:26:44 (562 KB/s) - '/home/pi/spms/uat2esnt' saved [82556/82556]
+
+--2022-03-15 18:26:44--  http://www.jurecka.net/spms/uat2json
+Resolving www.jurecka.net (www.jurecka.net)... 74.208.244.83
+Connecting to www.jurecka.net (www.jurecka.net)|74.208.244.83|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://www.jurecka.net/spms/uat2json [following]
+--2022-03-15 18:26:44--  https://www.jurecka.net/spms/uat2json
+Connecting to www.jurecka.net (www.jurecka.net)|74.208.244.83|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 58156 (57K)
+Saving to: '/home/pi/spms/uat2json'
+
+     0K .......... .......... .......... .......... .......... 88%  394K 0s
+    50K ......                                                100% 24.7M=0.1s
+
+2022-03-15 18:26:45 (447 KB/s) - '/home/pi/spms/uat2json' saved [58156/58156]
+
+--2022-03-15 18:26:45--  http://www.jurecka.net/spms/uat2text
+Resolving www.jurecka.net (www.jurecka.net)... 74.208.244.83
+Connecting to www.jurecka.net (www.jurecka.net)|74.208.244.83|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://www.jurecka.net/spms/uat2text [following]
+--2022-03-15 18:26:45--  https://www.jurecka.net/spms/uat2text
+Connecting to www.jurecka.net (www.jurecka.net)|74.208.244.83|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 52732 (51K)
+Saving to: '/home/pi/spms/uat2text'
+
+     0K .......... .......... .......... .......... .......... 97%  391K 0s
+    50K .                                                     100% 2.79T=0.1s
+
+2022-03-15 18:26:45 (402 KB/s) - '/home/pi/spms/uat2text' saved [52732/52732]
+
+--2022-03-15 18:26:45--  http://www.jurecka.net/spms/restart
+Resolving www.jurecka.net (www.jurecka.net)... 74.208.244.83
+Connecting to www.jurecka.net (www.jurecka.net)|74.208.244.83|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://www.jurecka.net/spms/restart [following]
+--2022-03-15 18:26:45--  https://www.jurecka.net/spms/restart
+Connecting to www.jurecka.net (www.jurecka.net)|74.208.244.83|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 401
+Saving to: '/home/pi/spms/restart'
+
+     0K                                                       100% 3.12M=0s
+
+2022-03-15 18:26:46 (3.12 MB/s) - '/home/pi/spms/restart' saved [401/401]
+
+--2022-03-15 18:26:46--  http://www.jurecka.net/spms/systemd/spms-adsb.service
+Resolving www.jurecka.net (www.jurecka.net)... 74.208.244.83
+Connecting to www.jurecka.net (www.jurecka.net)|74.208.244.83|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://www.jurecka.net/spms/systemd/spms-adsb.service [following]
+--2022-03-15 18:26:46--  https://www.jurecka.net/spms/systemd/spms-adsb.service
+Connecting to www.jurecka.net (www.jurecka.net)|74.208.244.83|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 171
+Saving to: '/lib/systemd/system/spms-adsb.service'
+
+     0K                                                       100% 1.69M=0s
+
+2022-03-15 18:26:46 (1.69 MB/s) - '/lib/systemd/system/spms-adsb.service' saved [171/171]
+
+--2022-03-15 18:26:46--  http://www.jurecka.net/spms/systemd/spms-mlat.service
+Resolving www.jurecka.net (www.jurecka.net)... 74.208.244.83
+Connecting to www.jurecka.net (www.jurecka.net)|74.208.244.83|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://www.jurecka.net/spms/systemd/spms-mlat.service [following]
+--2022-03-15 18:26:46--  https://www.jurecka.net/spms/systemd/spms-mlat.service
+Connecting to www.jurecka.net (www.jurecka.net)|74.208.244.83|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 188
+Saving to: '/lib/systemd/system/spms-mlat.service'
+
+     0K                                                       100% 1.76M=0s
+
+2022-03-15 18:26:47 (1.76 MB/s) - '/lib/systemd/system/spms-mlat.service' saved [188/188]
+
+--2022-03-15 18:26:47--  http://www.jurecka.net/spms/systemd/spms-push-uat978.service
+Resolving www.jurecka.net (www.jurecka.net)... 74.208.244.83
+Connecting to www.jurecka.net (www.jurecka.net)|74.208.244.83|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://www.jurecka.net/spms/systemd/spms-push-uat978.service [following]
+--2022-03-15 18:26:47--  https://www.jurecka.net/spms/systemd/spms-push-uat978.service
+Connecting to www.jurecka.net (www.jurecka.net)|74.208.244.83|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 176
+Saving to: '/lib/systemd/system/spms-push-uat978.service'
+
+     0K                                                       100% 2.20M=0s
+
+2022-03-15 18:26:47 (2.20 MB/s) - '/lib/systemd/system/spms-push-uat978.service' saved [176/176]
+
+--2022-03-15 18:26:47--  http://www.jurecka.net/spms/systemd/spms-uat978.service
+Resolving www.jurecka.net (www.jurecka.net)... 74.208.244.83
+Connecting to www.jurecka.net (www.jurecka.net)|74.208.244.83|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://www.jurecka.net/spms/systemd/spms-uat978.service [following]
+--2022-03-15 18:26:47--  https://www.jurecka.net/spms/systemd/spms-uat978.service
+Connecting to www.jurecka.net (www.jurecka.net)|74.208.244.83|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 154
+Saving to: '/lib/systemd/system/spms-uat978.service'
+
+     0K                                                       100% 1.09M=0s
+
+2022-03-15 18:26:48 (1.09 MB/s) - '/lib/systemd/system/spms-uat978.service' saved [154/154]
+
+./spms-setup.sh: line 264: //systemctl: No such file or directory
+./spms-setup.sh: line 265: //systemctl: No such file or directory
+Created symlink /etc/systemd/system/multi-user.target.wants/spms-adsb.service -> /lib/systemd/system/spms-adsb.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/spms-mlat.service -> /lib/systemd/system/spms-mlat.service.
+
+ CREATE AND CONFIGURE NETCAT STARTUP SCRIPTS
+-------------------------------------------------
+
+./spms-setup.sh: line 421: //systemctl: No such file or directory
+./spms-setup.sh: line 422: //systemctl: No such file or directory

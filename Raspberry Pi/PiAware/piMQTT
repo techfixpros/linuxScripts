@@ -1,0 +1,58 @@
+#!/bin/bash
+#
+# mqtt_data.sh - send data to MQTT broker
+#
+# Get Data values
+ampsNow=$(cat /sys/devices/platform/rpi-poe-power-supply@0/power_supply/rpi-poe/current_now | awk '{print $1/1000000}')
+ampsAvg=$(cat /sys/devices/platform/rpi-poe-power-supply@0/power_supply/rpi-poe/current_avg | awk '{print $1/1000000}')
+ampsMax=$(cat /sys/devices/platform/rpi-poe-power-supply@0/power_supply/rpi-poe/current_max | awk '{print $1/1000000}')
+wattsNow=$(echo "$ampsNow * 5" | bc)
+wattsAvg=$(echo "$ampsAvg * 5" | bc)
+wattsMax=$(echo "$ampsMax * 5" | bc)
+poeHealth=$(cat /sys/devices/platform/rpi-poe-power-supply@0/power_supply/rpi-poe/health)
+gpu=$(vcgencmd measure_temp | awk -F "[=']" '{print $2}')
+cpu=$(</sys/class/thermal/thermal_zone0/temp)
+cpu=$(echo "$cpu / 100 * 0.1" | bc)
+cpuF=$(echo "(1.8 * $cpu) + 32" | bc)
+gpuF=$(echo "(1.8 * $gpu) + 32" | bc)
+iTempF=$(temper | awk '{ print substr($8, 1, length($8)-1) }')
+eTempF=$(temper | awk '{ print substr($11, 1, length($11)-1) }')
+ 
+#echo "$cpuF $gpuF $iTempF $eTempF $ampsNow $wattsNow $ampsAvg $wattsAvg $ampsMax $wattsMax $poeHealth"
+ 
+# Publish Data
+server="192.168.1.181"
+pause=0
+ 
+mosquitto_pub -h $server -t piaware/ampsNow -m $ampsNow
+sleep $pause
+
+mosquitto_pub -h $server -t piaware/ampsAvg -m $ampsAvg
+sleep $pause
+
+mosquitto_pub -h $server -t piaware/ampsMax -m $ampsMax
+sleep $pause
+
+mosquitto_pub -h $server -t piaware/poeHealth -m $poeHealth
+sleep $pause
+
+mosquitto_pub -h $server -t piaware/cpuF -m $cpuF
+sleep $pause
+
+mosquitto_pub -h $server -t piaware/gpuF -m $gpuF
+sleep $pause
+
+mosquitto_pub -h $server -t piaware/wattsNow -m $wattsNow
+sleep $pause
+
+mosquitto_pub -h $server -t piaware/wattsAvg -m $wattsAvg
+sleep $pause
+
+mosquitto_pub -h $server -t piaware/wattsMax -m $wattsMax
+sleep $pause
+
+mosquitto_pub -h $server -t piaware/iTempF -m $iTempF
+sleep $pause
+
+mosquitto_pub -h $server -t piaware/eTempF -m $eTempF
+sleep $pause
