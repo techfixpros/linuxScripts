@@ -71,7 +71,7 @@ n0 = " 80-40:{}".format(n0)
 n1 = " 30-20:{}".format(n1)
 n2 = " 17-15:{}".format(n2)
 n3 = " 12-10:{}".format(n3)
-v1 = " / VHF :{}".format(v1)
+v1 = " / VHF: {}".format(v1)
 
 #Send Solar Weather via RemoteCommand
 cmd = "sudo /usr/local/bin/RemoteCommand 7642 page " + rubric1 + solarindex + aindex + kindex + sunspots + snr + muf + v1
