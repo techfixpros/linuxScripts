@@ -5,4 +5,6 @@
 # John/KI5NYZ 2022
 #
 
-sudo RemoteCommand 7642 page 177126 "PI-STAR: Testing from PiStar CLI"
+ric = "urRIC"
+
+sudo RemoteCommand 7642 page $ric "PI-STAR: Testing from PiStar CLI"
