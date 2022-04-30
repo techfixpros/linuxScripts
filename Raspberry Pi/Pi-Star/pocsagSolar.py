@@ -65,7 +65,7 @@ cmd = "sudo /usr/local/bin/RemoteCommand 7642 page " + rubric1 + solarindexS + a
 #cmd = "sudo /usr/local/bin/RemoteCommand 7642 page " + rubric2 +
 
 #Send DAPNet
-#cmd = "sudo /usr/local/sbin/pistar-dapnetapi KI5NYZ 'Solar Index:'" + solarindex
+#cmd = "sudo /usr/local/sbin/pistar-dapnetapi changeMe 'Solar Index:'" + solarindex
 
 process = subprocess.call(cmd,stdout=subprocess.PIPE, shell=True)
 
