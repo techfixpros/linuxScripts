@@ -12,9 +12,9 @@ import subprocess
 import time
 from datetime import datetime
 
-callSign = "KI5NYZ"
-rubric1 = "1082"
-rubric2= "1083"
+callSign = "changeMe"
+rubric1 = "changeMe"
+rubric2= "changeMe"
 
 now = datetime.now()
 dt_string = now.strftime("%m/%d/%y %H:%M:%S : ")
