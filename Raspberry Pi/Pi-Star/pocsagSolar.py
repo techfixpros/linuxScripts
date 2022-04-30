@@ -9,10 +9,12 @@
 import urllib3.request
 import xmltodict
 import subprocess
+import time
 from datetime import datetime
 
 callSign = "KI5NYZ"
-rubric = "1082"
+rubric1 = "1082"
+rubric2= "1083"
 
 now = datetime.now()
 dt_string = now.strftime("%m/%d/%y %H:%M:%S : ")
@@ -31,24 +33,36 @@ solarindex = doc['solar']['solardata']['solarflux']
 aindex = doc['solar']['solardata']['aindex']
 kindex = doc['solar']['solardata']['kindex']
 sunspots = doc['solar']['solardata']['sunspots']
+snr = doc['solar']['solardata']['signalnoise']
+muf = doc['solar']['solardata']['muf']
 
 solarindexS = " Solar Index: {}".format(solarindex)
-aindexS = " / A Index: {}".format(aindex)
-kindexS = " / K Index: {}".format(kindex)
+aindexS = " / A: {}".format(aindex)
+kindexS = " / K: {}".format(kindex)
 sunspotsS = " / Sunspots: {}".format(sunspots)
+snrS = " / SNR: {}".format(snr)
+mufS = " / MUF: {}".format(muf)
 
 #print('Solar Index: ', solarindex)
 #print('A Index: ', aindex)
 #print('K Index: ', kindex)
 #print('Sunspots: ', sunspots)
+#print('SNR: ',snr)
+#print('MUF: ', muf)
 #print('----------------------')
 #print(solarindexS)
 #print(aindexS)
 #print(kindexS)
 #print(sunspotsS)
+#print(snrS)
+#print(mufS)
 
 #Send Local
-cmd = "sudo /usr/local/bin/RemoteCommand 7642 page " + rubric + solarindexS + aindexS + kindexS + sunspotsS
+cmd = "sudo /usr/local/bin/RemoteCommand 7642 page " + rubric1 + solarindexS + aindexS + kindexS + sunspotsS + snrS + mufS
+
+#time.sleep(5)
+
+#cmd = "sudo /usr/local/bin/RemoteCommand 7642 page " + rubric2 +
 
 #Send DAPNet
 #cmd = "sudo /usr/local/sbin/pistar-dapnetapi KI5NYZ 'Solar Index:'" + solarindex
