@@ -10,7 +10,7 @@ import urllib3.request
 import xmltodict
 import subprocess
 
-callSign = "changeMe"
+callSign = "N0CALL"
 rubric1 = "changeMe" # Solar Weather
 rubric2= "changeMe" # Band Conditions
 
