@@ -10,9 +10,9 @@ import urllib3.request
 import xmltodict
 import subprocess
 
-callSign = "KI5NYZ"
-rubric1 = "1082" # Solar Weather
-rubric2= "1083" # Band Conditions
+callSign = "changeMe"
+rubric1 = "changeMe" # Solar Weather
+rubric2= "changeMe" # Band Conditions
 
 http = urllib3.PoolManager()
 
@@ -82,9 +82,9 @@ cmd = "sudo /usr/local/bin/RemoteCommand 7642 page " + rubric2 + d0 + d1 + d2 + 
 process = subprocess.call(cmd,stdout=subprocess.PIPE, shell=True)
 
 #Send Solar Weather via DAPNet
-#cmd = "sudo /usr/local/sbin/pistar-dapnetapi KI5NYZ 'Solar Index:'" + solarindex + aindex + kindex + sunspots + snr + muf + v1
+#cmd = "sudo /usr/local/sbin/pistar-dapnetapi changeMe 'Solar Index:'" + solarindex + aindex + kindex + sunspots + snr + muf + v1
 #process = subprocess.call(cmd,stdout=subprocess.PIPE, shell=True)
 
 #Send Band Conditions via DAPNet
-#cmd = "sudo /usr/local/sbin/pistar-dapnetapi KI5NYZ 'Conditions:'" + d0 + d1 + d2 + d3 + n0 + n1 + n2 + n3
+#cmd = "sudo /usr/local/sbin/pistar-dapnetapi changeMe 'Conditions:'" + d0 + d1 + d2 + d3 + n0 + n1 + n2 + n3
 #process = subprocess.call(cmd,stdout=subprocess.PIPE, shell=True)
