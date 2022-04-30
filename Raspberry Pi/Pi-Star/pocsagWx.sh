@@ -8,7 +8,7 @@
 #
 # Configuration
 
-call="N0CALL"
+callsign="N0CALL"
 grid="urGrid"
 time=$(date +"%H:%M")
 server="urServer"
@@ -32,4 +32,4 @@ rainR=$(mosquitto_sub -h $server -C 1 -t $prefix/rainRate_inch_per_hour | awk -F
 
 lux=$(mosquitto_sub -h $server -C 1 -t $prefix/radiation_Wpm2 | awk -F '.' '{print $1 "." substr ($2, 0, 2)}')
 
-sudo RemoteCommand 7642 page $ric "$call/$grid: ${outT}F w: ${windS}mi/h=${windD}deg h: $humid% inHg: $baro r: ${rainR}in/h l: ${lux}Wpm2"
+sudo RemoteCommand 7642 page $ric "$callsign/$grid: ${outT}F w: ${windS}mi/h=${windD}deg h: $humid% inHg: $baro r: ${rainR}in/h l: ${lux}Wpm2"
