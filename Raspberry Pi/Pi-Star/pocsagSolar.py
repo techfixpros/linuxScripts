@@ -82,9 +82,9 @@ cmd = "sudo /usr/local/bin/RemoteCommand 7642 page " + rubric2 + d0 + d1 + d2 + 
 process = subprocess.call(cmd,stdout=subprocess.PIPE, shell=True)
 
 #Send Solar Weather via DAPNet
-#cmd = "sudo /usr/local/sbin/pistar-dapnetapi changeMe 'Solar Index:'" + solarindex + aindex + kindex + sunspots + snr + muf + v1
+#cmd = "sudo /usr/local/sbin/pistar-dapnetapi N0CALL 'Solar Index:'" + solarindex + aindex + kindex + sunspots + snr + muf + v1
 #process = subprocess.call(cmd,stdout=subprocess.PIPE, shell=True)
 
 #Send Band Conditions via DAPNet
-#cmd = "sudo /usr/local/sbin/pistar-dapnetapi changeMe 'Conditions:'" + d0 + d1 + d2 + d3 + n0 + n1 + n2 + n3
+#cmd = "sudo /usr/local/sbin/pistar-dapnetapi N0CALL 'Conditions:'" + d0 + d1 + d2 + d3 + n0 + n1 + n2 + n3
 #process = subprocess.call(cmd,stdout=subprocess.PIPE, shell=True)
