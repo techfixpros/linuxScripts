@@ -4,7 +4,7 @@
 # John/KI5NYZ 2022
 #
 # Original script by Josh/KI6NAZ
-# Adapted from youtube screenshot https://www.youtube.com/watch?v=XnyxwmMPX_g
+# Adapted from youtube screenshot https://youtu.be/XnyxwmMPX_g?t=323
 
 import urllib3.request
 import xmltodict
