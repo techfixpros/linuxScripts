@@ -10,9 +10,9 @@ import urllib3.request
 import xmltodict
 import subprocess
 
-callSign = "N0CALL"
-rubric1 = "changeMe" # Solar Weather
-rubric2= "changeMe" # Band Conditions
+callsign = "N0CALL"
+rubric1 = "" # Solar Weather
+rubric2 = "" # Band Conditions
 
 http = urllib3.PoolManager()
 
@@ -27,7 +27,7 @@ sunspots = doc['solar']['solardata']['sunspots']
 snr = doc['solar']['solardata']['signalnoise']
 muf = doc['solar']['solardata']['muf']
 
-solarindex = " Solar Index: {}".format(solarindex)
+solarindex = " SFI: {}".format(solarindex)
 aindex = " / A: {}".format(aindex)
 kindex = " / K: {}".format(kindex)
 sunspots = " / Sunspots: {}".format(sunspots)
@@ -74,7 +74,7 @@ n3 = " 12-10:{}".format(n3)
 v1 = " / VHF: {}".format(v1)
 
 #Send Solar Weather via RemoteCommand
-cmd = "sudo /usr/local/bin/RemoteCommand 7642 page " + rubric1 + solarindex + aindex + kindex + sunspots + snr + muf + v1
+cmd = "sudo /usr/local/bin/RemoteCommand 7642 page " + rubric1 + solarindex + kindex + aindex + sunspots + snr + muf + v1
 process = subprocess.call(cmd,stdout=subprocess.PIPE, shell=True)
 
 #Send Band Conditions via RemoteCommand
@@ -82,9 +82,9 @@ cmd = "sudo /usr/local/bin/RemoteCommand 7642 page " + rubric2 + d0 + d1 + d2 + 
 process = subprocess.call(cmd,stdout=subprocess.PIPE, shell=True)
 
 #Send Solar Weather via DAPNet
-#cmd = "sudo /usr/local/sbin/pistar-dapnetapi N0CALL 'Solar Index:'" + solarindex + aindex + kindex + sunspots + snr + muf + v1
+#cmd = "sudo /usr/local/sbin/pistar-dapnetapi N0CALL 'Solar Index:'" + solarindex + kindex + aindex + sunspots + snr + muf + v1
 #process = subprocess.call(cmd,stdout=subprocess.PIPE, shell=True)
 
 #Send Band Conditions via DAPNet
-#cmd = "sudo /usr/local/sbin/pistar-dapnetapi N0CALL 'Conditions:'" + d0 + d1 + d2 + d3 + n0 + n1 + n2 + n3
+#cmd = "sudo /usr/local/sbin/pistar-dapnetapi N0CALL 'Band Conditions:'" + d0 + d1 + d2 + d3 + n0 + n1 + n2 + n3
 #process = subprocess.call(cmd,stdout=subprocess.PIPE, shell=True)
